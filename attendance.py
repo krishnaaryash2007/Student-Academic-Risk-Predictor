@@ -4,4 +4,4 @@ def attendance_status(attendance):
         return "Good Attendance"
 
     else:
-        return "Low Attendance"
+        return "Less Attendance"
