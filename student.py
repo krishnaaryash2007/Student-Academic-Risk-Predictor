@@ -1,4 +1,4 @@
-students = []
+students = []  # keeps all student records in memory
 
 
 def add_student():
@@ -7,6 +7,7 @@ def add_student():
     reg_no = input("Enter registration number: ")
     name = input("Enter student name: ")
 
+    # performance stats, all as percentages
     attendance = float(input("Enter attendance percentage: "))
     marks = float(input("Enter marks percentage: "))
     quiz = float(input("Enter quiz percentage: "))
@@ -24,14 +25,13 @@ def add_student():
     }
 
     students.append(student)
-
     print("Student added successfully.")
 
 
 def show_students():
     print("\n--- Student List ---")
 
-    if len(students) == 0:
+    if not students:
         print("No students found.")
         return
 
@@ -48,11 +48,9 @@ def show_students():
 
 def search_student():
     print("\n--- Search Student ---")
-
     reg_no = input("Enter registration number: ")
 
     for student in students:
-
         if student["reg_no"] == reg_no:
             print("\nStudent Found")
             print("Name:", student["name"])
@@ -68,11 +66,9 @@ def search_student():
 
 def delete_student():
     print("\n--- Delete Student ---")
-
     reg_no = input("Enter registration number: ")
 
     for student in students:
-
         if student["reg_no"] == reg_no:
             students.remove(student)
             print("Student deleted.")
