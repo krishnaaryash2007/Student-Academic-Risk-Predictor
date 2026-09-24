@@ -11,7 +11,7 @@ from risk import find_risk
 from recommendation import give_recommendation
 
 
-# analyze a single student by reg no
+# analyze a single student by registration no.
 def analyze_one_student():
     if len(students) == 0:
         print("No students available.")
